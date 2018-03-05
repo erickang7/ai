@@ -1,12 +1,5 @@
-#!/bin/bash
-# FROM gcr.io/tensorflow/tensorflow \
+#!/bin/sh
 
-docker rm -f tensorflow
+docker start tensorflow
 
-docker run --name tensorflow \
--p 8888:8888 \
--p 6006:6006 \
--d ericskang/tensorflow:practice \
-tail -f /dev/null
-
-docker exec -ti tensorflow bash
+docker logs tensorflow | grep token

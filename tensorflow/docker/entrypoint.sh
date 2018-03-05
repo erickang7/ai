@@ -1,2 +1,2 @@
 #!/bin/bash
-tail -f /dev/null
+bash /run_jupyter.sh --allow-root
