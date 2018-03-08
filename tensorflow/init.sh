@@ -5,6 +5,7 @@ docker rm -f tensorflow
 
 docker run \
 --name tensorflow \
+-v $HOME/projects/ai/tensorflow/workspace:/notebooks/workspace \
 --mount source=tfvol,target=/notebooks/models \
 -p 8888:8888 \
 -p 6006:6006 \
