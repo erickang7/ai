@@ -1,4 +1,4 @@
-FROM gcr.io/tensorflow/tensorflow
+FROM tensorflow/tensorflow:latest-gpu-py3
 
 RUN apt-get update && apt-get install -y vim git
 
