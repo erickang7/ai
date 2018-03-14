@@ -1,7 +1,7 @@
 #!/bin/bash
 # FROM gcr.io/tensorflow/tensorflow \
 
-docker rm -f tensorflow
+#docker rm -f tensorflow
 
 docker run \
 --name tensorflow \
@@ -11,6 +11,6 @@ docker run \
 -p 6006:6006 \
 -d ericskang/tensorflow:practice
 
-docker exec -ti tensorflow bash -c /gitclone_models.sh
+#docker exec -ti tensorflow bash -c /gitclone_models.sh
 
 docker logs tensorflow | grep token

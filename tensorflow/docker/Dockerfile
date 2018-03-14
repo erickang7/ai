@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu-py3
+FROM tensorflow/tensorflow:latest-py3
 
 RUN apt-get update && apt-get install -y vim git
 COPY sklearn0.20/scikit-learn-0.20.dev0.tar.gz /tmp/
