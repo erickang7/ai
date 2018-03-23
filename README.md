@@ -2,10 +2,10 @@
 
 **AI Playground** provides an easy way to setup a tensorflow, scikit-learn and jupyter notebook playground as a docker container environment to help you easily start learning ML and AI basics without spending a few hours to setup the environment.
 
-I assume that you know the basics of Docker such as docker build and run. Thanks to Google, a good base image is available at [Docker Hub: Tensorflow repository](https://hub.docker.com/r/tensorflow/tensorflow). You can simply start from a Google's tensorflow image as the base docker image and add layers on top of it as we need. For example, I included scikit-learn version 2.0-dev package instead of the version 0.19x stable since the 0.20-dev version has many bug fixes and new features that we need to follow sample codes from a very useful reference, [Hands-on Machine Learning with Scikit-Learn and Tensorflow](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291/ref=sr_1_2?ie=UTF8&qid=1521836305&sr=8-2&keywords=hands-on+machine+learning+with+scikit-learn+%26+tensorflow) If you haven't read this book, I recommend getting a copy.
+I assume that you know the basics of Docker such as docker build and run. Thanks to Google, a good base image is available at [Docker Hub: Tensorflow repository](https://hub.docker.com/r/tensorflow/tensorflow). You can simply start from a Google's tensorflow image as the base docker image and add layers on top of it as you need. For example, I included scikit-learn version 2.0-dev package instead of the version 0.19x stable since the 0.20-dev version has many bug fixes and new features that we need to follow sample codes from a very useful reference, [Hands-on Machine Learning with Scikit-Learn and Tensorflow](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291/ref=sr_1_2?ie=UTF8&qid=1521836305&sr=8-2&keywords=hands-on+machine+learning+with+scikit-learn+%26+tensorflow) If you haven't read this book, I recommend getting a copy.
 
 ## Prepare AI Playground docker image
-First, login to your laptop or PC. I assume your laptop is either Linux desktop or mac. You can use Windows as well but I didn't test it.
+First, login to your laptop or PC. I assume your laptop is either Linux desktop or mac. You can use Windows as well but I haven't tested it yet.
 If you haven't installed Docker on your PC, install Docker first by following instructions at [Docker Installation](https://docs.docker.com/install/)
 
 Once you have Docker running on your laptop, run following commands to prepare aiplayground docker image. I could have shared the docker image in a public repository but I decided rather not redistributing stuff without fully validating licenses. You can easily build your docker image by following instructions below anyways.
@@ -40,7 +40,7 @@ Then run the following command to get the entry URL to Jupyter notebook running 
 docker logs tensorflow | grep token
 ```
 
-You should see a result similar to sample output below. In the sample output, ```http://localhost:8888/?token=83a3719cec38fb6849d708fb757d5adec1f72b159f73b172``` is the URL for the Jupyter Notebook running in the docker container we just spun up.
+You should see a result similar to the sample output below. In the sample output, ```http://localhost:8888/?token=83a3719cec38fb6849d708fb757d5adec1f72b159f73b172``` is the URL for the Jupyter Notebook running in the docker container we just spun up.
 
 ```bash
 [erickang@bluewood tensorflow]$ ./init.sh
